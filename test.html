@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧲 [슬라이드] 자석 단원 성취기준 기반 루브릭 연수</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+    <style>
+        body {
+            font-family: 'Pretendard', sans-serif;
+        }
+        /* 아코디언(details) 마커 커스텀 */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] > summary .accordion-arrow { transform: rotate(90deg); }
+
+        /* 슬라이드 전환 효과 */
+        .slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.hidden {
+            opacity: 0;
+            position: absolute; /* 숨겨진 슬라이드는 레이아웃에 영향을 주지 않도록 */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-sky-50 text-slate-800 flex flex-col min-h-screen">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <span class="text-2xl">🧲</span>
+                    <a href="#" class="text-lg font-bold text-teal-700">자석 단원 루브릭 연수</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#slide-2" data-slide-to="1" class="nav-link text-slate-600 hover:text-teal-600 font-semibold">🎯 연수 목표</a>
+                    <a href="#slide-3" data-slide-to="2" class="nav-link text-slate-600 hover:text-teal-600 font-semibold">💡 개념 이해</a>
+                    <a href="#slide-4" data-slide-to="3" class="nav-link text-slate-600 hover:text-teal-600 font-semibold">🔬 성취기준</a>
+                    <a href="#slide-6" data-slide-to="5" class="nav-link text-slate-600 hover:text-teal-600 font-semibold">🛠️ 개발 절차</a>
+                    <a href="#slide-8" data-slide-to="7" class="nav-link text-slate-600 hover:text-teal-600 font-semibold">📝 루브릭 예시</a>
+                    <a href="#slide-10" data-slide-to="9" class="nav-link text-slate-600 hover:text-teal-600 font-semibold">❓ 요약 및 Q&A</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="slider-container" class="flex-grow flex flex-col items-center justify-center relative w-full overflow-hidden">
+        
+        <div class="slide w-full max-w-4xl p-8 text-center flex flex-col justify-center items-center min-h-[70vh]">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 leading-tight">
+                2022 개정 교육과정 초등학교 4학년 과학<br>
+                <span class="text-teal-600">자석 단원 성취기준 기반 루브릭 연수</span>
+            </h1>
+            <p class="mt-4 text-lg text-slate-500">교사를 위한 효과적인 평가 도구 활용 방안</p>
+        </div>
+        
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-teal-200">🎯 연수 목표</h2>
+            <ul class="space-y-4 text-xl">
+                <li class="flex items-start"><span class="text-teal-500 mr-3 mt-1">✅</span><span>2022 개정 교육과정의 <strong class="font-semibold text-orange-600">주요 용어</strong>를 이해합니다.</span></li>
+                <li class="flex items-start"><span class="text-teal-500 mr-3 mt-1">✅</span><span>'자석의 이용' 단원 <strong class="font-semibold text-orange-600">성취기준 및 성취수준</strong>을 명확히 파악합니다.</span></li>
+                <li class="flex items-start"><span class="text-teal-500 mr-3 mt-1">✅</span><span>성취수준 기반의 <strong class="font-semibold text-orange-600">루브릭 개발 절차와 활용 방안</strong>을 이해합니다.</span></li>
+                <li class="flex items-start"><span class="text-teal-500 mr-3 mt-1">✅</span><span>루브릭을 활용하여 <strong class="font-semibold text-orange-600">학생들의 학습 성장을 지원</strong>하는 역량을 함양합니다.</span></li>
+            </ul>
+        </div>
+        
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-teal-200">💡 성취기준 및 성취수준 이해</h2>
+            <div class="space-y-6">
+                 <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-sky-400"><h3 class="font-bold text-xl text-sky-800 mb-2">성취기준</h3><p class="text-slate-600">학생이 학습을 통해 성취해야 할 능력과 특성. <strong class="font-semibold">수업 및 평가의 근거</strong>입니다.</p></div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-orange-400"><h3 class="font-bold text-xl text-orange-800 mb-2">성취수준</h3><p class="text-slate-600">성취기준에 도달한 정도. 일반적으로 <strong class="font-semibold">3수준(A~C)</strong>으로 구분합니다.</p></div>
+                 <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-400"><h3 class="font-bold text-xl text-teal-800 mb-2">성취기준별/영역별 성취수준</h3><p class="text-slate-600">개별 또는 영역 단위의 <strong class="font-semibold">구체적인 도달 목표</strong>를 제시합니다.</p></div>
+            </div>
+        </div>
+        
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+             <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-teal-200">🔬 '자석의 이용' 성취기준</h2>
+             <div class="space-y-3">
+                 <details class="bg-white rounded-lg shadow-md overflow-hidden"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-sky-50"><h3 class="font-semibold text-lg text-slate-700">[4과09-01] 자석과 물체</h3><div class="accordion-arrow text-teal-500 font-bold text-2xl">▶</div></summary><div class="p-4 border-t border-slate-200 bg-sky-50/50 space-y-2"><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-green-500 text-white mr-2">A</strong> 힘의 특징 <strong class="text-green-700">설명</strong></p><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2">B</strong> 공통점 <strong class="text-yellow-700">찾기</strong></p><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-red-500 text-white mr-2">C</strong> <strong class="text-red-700">분류</strong>하기</p></div></details>
+                 <details class="bg-white rounded-lg shadow-md overflow-hidden"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-sky-50"><h3 class="font-semibold text-lg text-slate-700">[4과09-02] 자석과 자석</h3><div class="accordion-arrow text-teal-500 font-bold text-2xl">▶</div></summary><div class="p-4 border-t border-slate-200 bg-sky-50/50 space-y-2"><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-green-500 text-white mr-2">A</strong> 나침반 현상 <strong class="text-green-700">설명</strong></p><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2">B</strong> 극 사이의 힘 <strong class="text-yellow-700">말하기</strong></p><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-red-500 text-white mr-2">C</strong> 현상 <strong class="text-red-700">관찰</strong>하기</p></div></details>
+                 <details class="bg-white rounded-lg shadow-md overflow-hidden"><summary class="flex justify-between items-center p-4 cursor-pointer hover:bg-sky-50"><h3 class="font-semibold text-lg text-slate-700">[4과09-03] 자석의 이용</h3><div class="accordion-arrow text-teal-500 font-bold text-2xl">▶</div></summary><div class="p-4 border-t border-slate-200 bg-sky-50/50 space-y-2"><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-green-500 text-white mr-2">A</strong> 장치 설계 및 <strong class="text-green-700">유용성 인식</strong></p><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-yellow-500 text-white mr-2">B</strong> 장치 <strong class="text-yellow-700">설계</strong>하기</p><p><strong class="w-6 h-6 inline-flex items-center justify-center rounded-full bg-red-500 text-white mr-2">C</strong> 관련 부분 <strong class="text-red-700">말하기</strong></p></div></details>
+             </div>
+        </div>
+        
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-orange-200">📊 영역별 성취수준</h2>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                 <div class="bg-green-100 p-6 rounded-lg shadow"><h4 class="font-bold text-xl text-green-800 mb-3">A 수준 (상)</h4><p class="text-green-700">힘의 특징과 활용 사례를 <strong class="font-semibold">설명</strong>하고, 장치를 <strong class="font-semibold">설계</strong>하며 과학의 <strong class="font-semibold">유용성을 인식</strong>한다.</p></div>
+                 <div class="bg-yellow-100 p-6 rounded-lg shadow"><h4 class="font-bold text-xl text-yellow-800 mb-3">B 수준 (중)</h4><p class="text-yellow-700">자석의 성질을 <strong class="font-semibold">말할 수 있고</strong>, 장치를 <strong class="font-semibold">설계</strong>하며 자석에 <strong class="font-semibold">흥미</strong>를 가진다.</p></div>
+                 <div class="bg-red-100 p-6 rounded-lg shadow"><h4 class="font-bold text-xl text-red-800 mb-3">C 수준 (하)</h4><p class="text-red-700">자석에 붙는 물체가 있음을 <strong class="font-semibold">알고</strong>, 현상을 <strong class="font-semibold">관찰</strong>하며 자석에 <strong class="font-semibold">관심</strong>을 가진다.</p></div>
+            </div>
+        </div>
+
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+            <h2 class="text-3xl font-bold text-slate-800 mb-8 pb-2 border-b-2 border-teal-200">🛠️ 루브릭 개발 절차</h2>
+            <div class="relative pl-8 border-l-2 border-dashed border-teal-400 space-y-8">
+                <div class="relative"><div class="absolute -left-12 top-2 w-8 h-8 bg-teal-500 rounded-full text-white font-bold flex items-center justify-center">1</div><div class="bg-white p-4 rounded-lg shadow-lg"><h3 class="font-bold text-lg text-teal-700">평가 요소 선정</h3><p class="text-slate-600 mt-1">성취기준을 분석하여 핵심 요소를 도출합니다.</p></div></div>
+                <div class="relative"><div class="absolute -left-12 top-2 w-8 h-8 bg-teal-500 rounded-full text-white font-bold flex items-center justify-center">2</div><div class="bg-white p-4 rounded-lg shadow-lg"><h3 class="font-bold text-lg text-teal-700">평가 방법 선정</h3><p class="text-slate-600 mt-1">평가 요소에 적합한 방법(관찰, 실험 등)을 결정합니다.</p></div></div>
+                <div class="relative"><div class="absolute -left-12 top-2 w-8 h-8 bg-teal-500 rounded-full text-white font-bold flex items-center justify-center">3</div><div class="bg-white p-4 rounded-lg shadow-lg"><h3 class="font-bold text-lg text-teal-700">평가 도구 개발</h3><p class="text-slate-600 mt-1">실제 평가 문항이나 과제를 설계합니다.</p></div></div>
+                <div class="relative"><div class="absolute -left-12 top-2 w-8 h-8 bg-teal-500 rounded-full text-white font-bold flex items-center justify-center">4</div><div class="bg-white p-4 rounded-lg shadow-lg"><h3 class="font-bold text-lg text-teal-700">채점 기준 개발 (루브릭)</h3><p class="text-slate-600 mt-1">A~C 수준별 구체적인 채점 기준을 기술합니다.</p></div></div>
+            </div>
+        </div>
+
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-teal-200">✨ 평가 도구 활용의 중요성</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-orange-50 p-4 rounded-lg flex items-start space-x-3"><span class="text-2xl pt-1">🎯</span><div><h3 class="font-semibold text-orange-800">목표 구체화</h3><p class="text-slate-600">수업 설계와 평가의 명확한 근거가 됩니다.</p></div></div>
+                <div class="bg-sky-50 p-4 rounded-lg flex items-start space-x-3"><span class="text-2xl pt-1">🔄</span><div><h3 class="font-semibold text-sky-800">수업-평가 일관성</h3><p class="text-slate-600">일관된 이해를 바탕으로 수업을 운영하게 돕습니다.</p></div></div>
+                <div class="bg-teal-50 p-4 rounded-lg flex items-start space-x-3"><span class="text-2xl pt-1">🤝</span><div><h3 class="font-semibold text-teal-800">교사 간 공통 이해</h3><p class="text-slate-600">해석의 차이를 줄여 교육과정 내실화를 꾀합니다.</p></div></div>
+                <div class="bg-purple-50 p-4 rounded-lg flex items-start space-x-3"><span class="text-2xl pt-1">📈</span><div><h3 class="font-semibold text-purple-800">성장 지원 피드백</h3><p class="text-slate-600">학생의 성장을 지원하는 피드백의 근거가 됩니다.</p></div></div>
+            </div>
+        </div>
+
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+             <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-teal-200">📝 루브릭 예시: 자석과 물체</h2>
+             <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                <table class="w-full text-left"><thead class="bg-teal-600 text-white"><tr><th class="p-4 font-semibold">척도</th><th class="p-4 font-semibold">수행 특성</th></tr></thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-teal-50/50"><td class="p-4 font-bold text-green-600">A 수준</td><td class="p-4">힘의 특징을 <strong class="font-semibold">구체적이고 정확하게 설명</strong>한다.</td></tr>
+                        <tr class="border-b hover:bg-teal-50/50"><td class="p-4 font-bold text-yellow-600">B 수준</td><td class="p-4">붙는 물체의 <strong class="font-semibold">공통점을 찾고 특징을 말한다.</strong></td></tr>
+                        <tr class="hover:bg-teal-50/50"><td class="p-4 font-bold text-red-600">C 수준</td><td class="p-4">붙는 물체와 안 붙는 물체를 <strong class="font-semibold">분류</strong>한다.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+             <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-orange-200">📝 루브릭 예시: 자석의 이용</h2>
+             <div class="overflow-x-auto bg-white rounded-lg shadow-lg">
+                <table class="w-full text-left"><thead class="bg-orange-500 text-white"><tr><th class="p-4 font-semibold">척도</th><th class="p-4 font-semibold">수행 특성</th></tr></thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-orange-50/50"><td class="p-4 font-bold text-green-600">A 수준</td><td class="p-4">장치를 <strong class="font-semibold">독창적으로 설계</strong>하고 과학의 <strong class="font-semibold">유용성을 깊이 인식</strong>한다.</td></tr>
+                        <tr class="border-b hover:bg-orange-50/50"><td class="p-4 font-bold text-yellow-600">B 수준</td><td class="p-4">자석의 성질을 이용한 장치를 <strong class="font-semibold">설계</strong>할 수 있다.</td></tr>
+                        <tr class="hover:bg-orange-50/50"><td class="p-4 font-bold text-red-600">C 수준</td><td class="p-4">자석 장치를 보고 <strong class="font-semibold">성질과 관련된 부분을 말할 수 있다.</strong></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slide hidden w-full max-w-4xl p-8 flex flex-col justify-center min-h-[70vh]">
+            <h2 class="text-3xl font-bold text-slate-800 mb-6 pb-2 border-b-2 border-teal-200">❓ 요약 및 질의응답</h2>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="font-bold text-xl text-teal-800 mb-4">⭐ 핵심 정리</h3>
+                <ul class="space-y-3 text-slate-600">
+                    <li class="flex"><span class="mr-3">📌</span><span><strong>성취기준/수준</strong>은 일관된 평가를 돕는 나침반입니다.</span></li>
+                    <li class="flex"><span class="mr-3">📌</span><span><strong>루브릭</strong>은 학생의 성장을 구체적으로 평가하고 지원하는 지도입니다.</span></li>
+                    <li class="flex"><span class="mr-3">📌</span><span>루브릭 개발 절차를 적용하여 <strong class="text-teal-600 font-semibold">효과적인 피드백</strong>을 제공할 수 있습니다.</span></li>
+                </ul>
+                <div class="mt-8 bg-sky-100/70 p-6 rounded-lg text-center"><h3 class="font-bold text-xl text-sky-800 mb-2">질의응답</h3><p class="text-slate-700">궁금한 점이나 의견이 있으시면 자유롭게 질문해주세요.</p></div>
+            </div>
+        </div>
+    </main>
+
+    <div class="w-full max-w-4xl mx-auto px-8 pb-8">
+        <div class="flex justify-between items-center bg-white/50 backdrop-blur-sm p-2 rounded-lg shadow-md">
+            <button id="prev-btn" class="px-4 py-2 rounded-md text-slate-600 hover:bg-teal-100 disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <div id="slide-counter" class="text-slate-700 font-semibold"></div>
+            <button id="next-btn" class="px-4 py-2 rounded-md text-slate-600 hover:bg-teal-100 disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const slideCounter = document.getElementById('slide-counter');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    // opacity와 z-index를 조절하여 부드러운 전환 효과
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                        setTimeout(() => slide.style.opacity = '1', 10);
+                    } else {
+                        slide.style.opacity = '0';
+                        setTimeout(() => slide.classList.add('hidden'), 500); // 0.5초 후 display:none 처리
+                    }
+                });
+
+                // 카운터 업데이트
+                slideCounter.textContent = `${index + 1} / ${totalSlides}`;
+
+                // 버튼 활성화/비활성화
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index === totalSlides - 1;
+                
+                // 현재 슬라이드에 해당하는 네비게이션 링크 강조
+                navLinks.forEach(link => {
+                    if (parseInt(link.dataset.slideTo) === index) {
+                        link.classList.add('text-teal-600', 'font-bold');
+                    } else {
+                        link.classList.remove('text-teal-600', 'font-bold');
+                    }
+                });
+            }
+
+            nextBtn.addEventListener('click', () => {
+                if (currentSlide < totalSlides - 1) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            });
+
+            prevBtn.addEventListener('click', () => {
+                if (currentSlide > 0) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const slideIndex = parseInt(link.dataset.slideTo);
+                    currentSlide = slideIndex;
+                    showSlide(currentSlide);
+                });
+            });
+
+            // 초기 슬라이드 설정
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
